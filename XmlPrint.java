@@ -25,16 +25,6 @@ public class XmlPrint {
                 totalCharge += rentalCharge;
 
 
-            // for (TransactionItem transItem : transaction.transItemList){
-            //     String movieTitle = transItem.getMovie().getTitle();
-            //     double rentalCharge = transItem.getCharge();
-                
-            //     statement.append("\t\t").append("<movie>"+movieTitle+"</movie>")
-            //     .append("\t").append("<charge>"+rentalCharge+"</charge>").append("\n");
-            //     totalCharge += rentalCharge;
-            // }
-
-
             statement.append("\t</transaction>\n");
         }
         
