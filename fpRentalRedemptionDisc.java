@@ -12,7 +12,7 @@ public class fpRentalRedemptionDisc extends couponDecorator {
         double mostExpensive = 0.0;
         for (TransactionItem item : decoratedTransaction.transItemList){
             double tempCharge = item.getCharge();
-            if (tempCharge > mostExpensive){
+            if (tempCharge > mostExpensive  &&  item instanceof Rental){
                 mostExpensive = tempCharge;
             }
             totalCharge += tempCharge;
@@ -22,7 +22,7 @@ public class fpRentalRedemptionDisc extends couponDecorator {
             customer.setFrequentRenterPoints(currentFRP-pointsCost);
             totalCharge -= mostExpensive;
         }
-        return totalCharge;  // 100% discount off of the most exp item
+        return totalCharge;  // 100% discount off of the most expensive Rental
 
     }
 }
